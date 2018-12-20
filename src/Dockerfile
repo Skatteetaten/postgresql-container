@@ -63,7 +63,7 @@ RUN {{ spec.environment_setup }}
     {% endif %}
   {% endif %}
 {% endif %}
-    INSTALL_PKGS="rsync tar gettext bind-utils nss_wrapper {{ spec.pkgs }}" && \
+    INSTALL_PKGS="git curl vim-minimal rsync tar gettext bind-utils nss_wrapper {{ spec.pkgs }}" && \
     yum -y --setopt=tsflags=nodocs install $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
     yum clean all && \
